@@ -19,7 +19,7 @@
 //  =============================================================================
 //  Breakpoints
 //  =============================================================================
-    
+
     $small: "screen and (max-width: 550px)";
     $medium: "screen and (max-width: 768px)";
     $large: "screen and (max-width: 992px)";
@@ -27,7 +27,7 @@
 //  =============================================================================
 //  Basic Styles & Layout
 //  =============================================================================
-   
+
 
 * {
   box-sizing: border-box;
@@ -63,7 +63,7 @@ body {
 }
 
 .container-narrow {
-  max-width: 1050px;
+  max-width: 900px;
 }
 
 @media screen and (max-width: 480px) {
@@ -121,7 +121,7 @@ h6 {
 
 p {
   line-height: 1.8;
-  font-size: 1.44rem;
+  font-size: 1.34rem;
   font-weight: 300;
   margin: 0;
   a {
@@ -183,7 +183,7 @@ p + h3 {
   position: relative;
   padding-top: 100px;
   padding-bottom: 100px;
-   p { // "A commemorative event..." 
+   p { // "A commemorative event..."
     color: $grey;
     font-style: italic;
     max-width: 440px;
@@ -192,7 +192,7 @@ p + h3 {
    }
    .caption {
     position: absolute;
-    bottom: 80px; 
+    bottom: 80px;
     right: 50px;
     text-align: right;
      span {
@@ -235,7 +235,7 @@ p + h3 {
       margin-left: 20px;
       position: relative;
       top: 4px;
-    } 
+    }
   }
 }
 
@@ -639,7 +639,7 @@ svg { height: 80vh; }
 
 @media screen and (min-width: 992px) {
   .march-beginning svg {
-    min-height: 700px;  
+    min-height: 700px;
     max-height: 900px;
   }
 }
