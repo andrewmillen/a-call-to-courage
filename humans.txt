@@ -1,0 +1,18 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Daniel Turner -- Design Strategy & Concepting -- @designut
+    Andrew Millen -- Design, Development -- @andrewsmillen
+
+# THANKS
+
+    Matt Washburn, John Mears, JD Graffam -- Creative Direction
+    Lauren Boswell -- Information & Research
+
+# TECHNOLOGY COLOPHON
+
+    CSS3, HTML5, Sass (SCSS)
+    Apache Server Configs, jQuery, Modernizr, Normalize.css
+    Sublime Text 3

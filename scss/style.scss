@@ -1,0 +1,1083 @@
+
+//  =============================================================================
+//  Variables
+//  =============================================================================
+
+    $teal: #29d6d4; // teal
+    $charcoal: #252525; // dark grey
+    $grey: #979797; // medium grey
+    $black: #000000; // black
+    $white: #eef2f4; // white
+
+    $serif: "merriweather", Georgia, serif;
+    $sans: "pathway gothic one", Arial, Helvetica, sans-serif;
+    $light: 300;
+    $regular: 400;
+    $bold: 700;
+
+
+//  =============================================================================
+//  Breakpoints
+//  =============================================================================
+    
+    $small: "screen and (max-width: 550px)";
+    $medium: "screen and (max-width: 768px)";
+    $large: "screen and (max-width: 992px)";
+
+//  =============================================================================
+//  Basic Styles & Layout
+//  =============================================================================
+   
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: $black;
+  font-family: $serif, $sans;
+  color: $white;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 300;
+  overflow-x: hidden;
+}
+
+::-moz-selection {
+  background: $teal;
+  color: #FFFFFF;
+  text-shadow: none;
+}
+
+::selection {
+  background: $teal;
+  color: #FFFFFF;
+  text-shadow: none;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 50px;
+}
+
+.container-narrow {
+  max-width: 1050px;
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    padding: 0 25px;
+  }
+}
+
+//  ===========================================
+//  Typography
+//  ===========================================
+
+h1 {
+  font-family: $sans;
+  font-size: 13rem;
+  margin: 0;
+  line-height: 1.1;
+  font-weight: $regular;
+}
+
+h2 {
+  font-family: $sans;
+  font-size: 4rem;
+  font-weight: 400;
+  margin: 0 0 0.1em;
+  line-height: 1;
+}
+
+h3 {
+  color: $teal;
+  font-family: $sans;
+  font-size: 3rem;
+  line-height: 1.1;
+  font-weight: $regular;
+  text-transform: uppercase;
+  margin: 0 auto;
+}
+
+h4 {
+  font-family: $serif;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  color: $teal;
+  margin: 0;
+}
+
+h6 {
+  text-transform: uppercase;
+  font-weight: $bold;
+  font-size: 1.4rem;
+  font-family: $sans;
+  letter-spacing: 2px;
+  margin: 0 0 0.5em;
+}
+
+p {
+  line-height: 1.8;
+  font-size: 1.44rem;
+  font-weight: 300;
+  margin: 0;
+  a {
+  color: inherit;
+  text-decoration: none;
+  transition: all .1s;
+  position: relative;
+  border-bottom: 1px solid $white;
+  text-shadow: 0 1px 0 #000, 1px 1px 0 #000, -1px 1px #000,
+				 	 0 2px 0 #000, 2px 2px 0 #000, -2px 2px #000,
+				 	 0 3px 0 #000, 3px 3px 0 #000, -3px 3px #000,
+				 	 0 4px 0 #000, 3px 4px 0 #000, -4px 4px #000,
+				 	 0 5px 0 #000, 4px 5px 0 #000, -5px 5px #000;
+  &:hover {
+    color: $teal;
+    border-color: $teal;
+  }
+  }
+}
+
+li {
+  font-size: 1.5rem;
+}
+
+p + p,
+p + h2,
+p + h3 {
+  margin-top: 1em;
+}
+
+@media screen and (max-width: 580px) {
+  p, li {
+    font-size: 1.2rem;
+  }
+  h2 {
+    font-size: 3rem;
+  }
+  h3 {
+    font-size: 2.6rem;
+  }
+  p + p,
+  p + h2 {
+    margin-top: .2em;
+  }
+  p + h3,
+  h4 + h3 {
+    margin-top: 1em;
+  }
+}
+
+//  ===========================================
+//  Hero
+//  ===========================================
+
+.hero {
+  width: 100vw;
+  background: url(../img/hero.jpg) center center no-repeat #1d1e1e;
+  background-size: cover;
+  position: relative;
+  padding-top: 100px;
+  padding-bottom: 100px;
+   p { // "A commemorative event..." 
+    color: $grey;
+    font-style: italic;
+    max-width: 440px;
+    font-size: 1.1rem;
+    padding-top: 1em;
+   }
+   .caption {
+    position: absolute;
+    bottom: 80px; 
+    right: 50px;
+    text-align: right;
+     span {
+        color: $white;
+        background: $charcoal;
+        display: inline-block;
+        margin-bottom: .6em;
+        padding: .6em 1em;
+        font-style: italic;
+        font-size: 1rem;
+       &:last-of-type {
+        margin-bottom: 0;
+       }
+     }
+   }
+  .logotype {
+    width: 100%;
+    max-width: 45%;
+  }
+  h3 {
+    text-transform: initial;
+  }
+}
+
+.schedule-link {
+  background: $teal;
+  a {
+    display: inline-block;
+    text-decoration: none;
+    width: 100%;
+    background: $teal;
+    font-size: 2.5rem;
+    padding: 1.2em 0;
+    font-family: $sans;
+    color: $charcoal;
+    text-transform: uppercase;
+    .calendar {
+      height: 40px;
+      width: auto;
+      margin-left: 20px;
+      position: relative;
+      top: 4px;
+    } 
+  }
+}
+
+
+
+@media screen and (max-width: 768px) {
+  .hero {
+    padding: 50px 0;
+    p {
+      max-width: 50%;
+      font-size: 1rem;
+      line-height: 1.5
+    }
+    .caption {
+      span {
+        font-size: .8rem;
+        margin-bottom: .3em;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .hero {
+    padding: 50px 0 200px;
+    background-size: 130%;
+    background-position: bottom;
+    .logotype {
+      max-width: 100%;
+    }
+    p {
+      max-width: 100%;
+    }
+    .caption {
+        right: auto;
+        left: 50px;
+        text-align: left;
+    }
+  }
+  .schedule-link {
+    text-align: center;
+    a {
+      font-size: 2rem;
+      padding: 1em 0;
+      .calendar {
+        height: 35px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero {
+    padding: 25px 0 150px;
+    .caption {
+      left: 25px;
+      bottom: 25px;
+    }
+  }
+}
+
+//  ===========================================
+//  History: Overview
+//  ===========================================
+
+.marchers {
+  padding: 100px 0;
+  background: #4b4b4b;
+  background: url(../img/maf-hero-clean.jpg) top center no-repeat #000000;
+  background-size: cover;
+  height: 2000px;
+  position: relative;
+  &:after {
+    background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+    content: ' ';
+    height: 20%;
+    position: absolute; bottom: 0; left: 0; right: 0;
+    width: 100vw;
+    z-index: 20;
+  }
+  h4 { // Commemorating the
+    margin-left: 8px;
+  }
+  h1 { // March Against Fear
+    line-height: 1;
+    display: inline;
+    position: relative;
+    z-index: 3;
+    text-transform: uppercase;
+    &:before {
+      content: '';
+      position: absolute;
+      left: -10px; right: -10px;
+      top: 27%;
+      bottom: 22%;
+      background: $black;
+      z-index: -1;
+      -ms-transform: skewX(-3deg) rotate(-3deg); /* IE 9 */
+      -webkit-transform: skewX(-3deg) rotate(-3deg); /* Safari */
+      transform: skewX(-3deg) rotate(-3deg);
+    }
+  }
+  img { // Fifty years later
+    width: 800px;
+    position: absolute;
+    bottom: 100px;
+    margin: 0 auto;
+    left: 0; right: 0;
+    max-width: 90%;
+    z-index: 30;
+  }
+  small.caption {
+  	background: $teal;
+  	color: $charcoal;
+  	font-weight: 700;
+  	text-transform: uppercase;
+  	letter-spacing: 2px;
+  	padding: 6px 20px;
+  	font-size: 1rem;
+  	position: absolute;
+  	z-index: 938;
+  	white-space: nowrap;
+	@media screen and (max-width: 992px) {
+		font-size: 0.8rem
+	}
+	@media screen and (max-width: 580px) {
+		font-size: 0.7rem;
+		letter-spacing: 1px;
+		padding: 4px 10px;
+	}
+	@media screen and (max-width: 480px) {
+		font-size: 0.6rem;
+	}
+  }
+}
+
+.mlk {
+	&:before {
+		content: '';
+		background: $teal;
+		height: 50px;
+		width: 2px;
+		transform: rotate(10deg);
+		position: absolute;
+		top: -45px;
+		left: 50%;
+		z-index: 937;
+	}
+	&:after {
+		content: '';
+		background: $teal;
+		width: 9px;
+		height: 9px;
+		border-radius: 100%;
+		position: absolute;
+		top: -45px;
+		left: 50%;
+	}
+	top: 60%;
+	left: 30%;
+	@media screen and (max-width: 1200px) {
+		left: 28%;
+	}
+	@media screen and (max-width: 768px) {
+		left: 5%;
+		top: auto;
+		bottom: 45%;
+	}
+	@media screen and (max-width: 580px) {
+		bottom: 35%;
+	}
+	@media screen and (max-width: 500px) {
+		bottom: 38%;
+		left: 5%
+	}
+	@media screen and (max-width: 375px) {
+		display: none;
+	}
+}
+.jm {
+	&:before {
+		content: '';
+		background: $teal;
+		height: 40px;
+		width: 2px;
+		transform: rotate(-10deg);
+		position: absolute;
+		top: -35px;
+		left: 50%;
+		z-index: 937;
+	}
+	&:after {
+		content: '';
+		background: $teal;
+		width: 9px;
+		height: 9px;
+		border-radius: 100%;
+		position: absolute;
+		top: -35px;
+		left: calc(50% - 7px);
+	}
+	top: 62%;
+	left: 63%;
+	@media screen and (max-width: 1200px) {
+		left: 66%;
+	}
+	@media screen and (max-width: 768px) {
+		left: 50%;
+		top: auto;
+		bottom: 47%;
+	}
+	@media screen and (max-width: 620px) {
+		bottom: 50%;
+	}
+	@media screen and (max-width: 580px) {
+		bottom: 40%;
+	}
+	@media screen and (max-width: 480px) {
+		bottom: 42%;
+	}
+}
+
+.years-later {
+  padding-bottom: 150px;
+}
+
+@media screen and (min-width: 1500px) {
+  .marchers {
+    height: 2400px;
+    h1 {
+      font-size: 18rem;
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .marchers {
+    height: 1600px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .marchers {
+    background-size: 170%;
+    background-position: 70% 0;
+    height: auto;
+    padding-bottom: 150%;
+    padding-top: 50px;
+    h1 {
+      font-size: 10rem;
+    }
+    img {
+      bottom: 50px;
+    }
+  }
+  .years-later {
+    padding-bottom: 50px;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .marchers {
+    padding-bottom: 140%;
+    h4 {
+      margin-bottom: 0.6em;
+    }
+    h1 {
+      font-size: 6rem;
+      line-height: .8;
+    }
+  }
+  .years-later {
+    padding-bottom: 35px;
+  }
+}
+
+
+//  ===========================================
+//  Photo bar
+//  ===========================================
+
+
+.photo-bar {
+  overflow-x: hidden;
+  margin-bottom: -10px;
+}
+
+.photo-bar img {
+  width: 100%;
+  height: auto;
+}
+
+@media screen and (max-width: 480px) {
+  .photo-bar img {
+    width: 300%;
+    margin-left: -190px;
+  }
+}
+
+//  ===========================================
+//  History: March Beginnings
+//  ===========================================
+
+.march-beginning {
+  background: $charcoal;
+  overflow: hidden;
+  padding: 100px 0;
+  a {
+  text-shadow: 0 1px 0 $charcoal, 1px 1px 0 $charcoal, -1px 1px $charcoal,
+				 	 0 2px 0 $charcoal, 2px 2px 0 $charcoal, -2px 2px $charcoal,
+				 	 0 3px 0 $charcoal, 3px 3px 0 $charcoal, -3px 3px $charcoal,
+				 	 0 4px 0 $charcoal, 0 4px 0 $charcoal, -4px 4px $charcoal,
+				 	 0 5px 0 $charcoal, 0 5px 0 $charcoal, -5px 5px $charcoal;
+  }
+  .container {
+    display: table;
+    .left {
+      display: table-cell;
+      width: 50%;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      padding-right: 8%;
+      vertical-align: middle;
+      .see-photo {
+        margin-left: 16px;
+        border: none;
+        color: $teal;
+        font-size: 22px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-family: $sans;
+        position: relative;
+        display: inline-block;
+        &:before {
+          content: '[ ';
+          position: absolute;
+          left: -12px;
+          top: 0;
+          transition: all .1s;
+        }
+        &:after {
+          content: ' ]';
+          position: absolute;
+          right: -12px;
+          top: 0;
+          transition: all .1s;
+        }
+        &:hover:before {
+           left: -14px;
+        }
+        &:hover:after {
+          right: -14px;
+        }
+        img {
+          height: 18px;
+          margin-right: 4px;
+        }
+      }
+    }
+    .right {
+      display: table-cell;
+      width: 50%;
+      vertical-align: middle;
+      padding-left: 2%;
+      overflow: hidden;
+    }
+    h3 {
+      margin-bottom: 0.3em;
+    }
+  }
+}
+
+// Animated SVG map styles
+svg { height: 80vh; }
+.route-grey, .route-teal { fill-rule:evenodd; clip-rule:evenodd; fill:none; stroke:#545958; stroke-width:10; stroke-miterlimit:10; }
+.route-teal { stroke:#29D6D4 }
+.state-line {fill:#36393C;}
+.town-names {fill:#BFBFBF;}
+.city-names, .city-marker {fill:#29D6D4;}
+.city-marker { fill:#29D6D4; }
+.town-markers {fill:#ABABAB;stroke:#252525;stroke-width:7;stroke-alignment:outer;stroke-miterlimit:10;}
+.city-names-wrapper {enable-background:new;}
+.river {fill:none;stroke:#36393C;stroke-width:10;stroke-miterlimit:10;}
+
+
+@media screen and (max-width: 1100px) {
+  .march-beginning {
+    .container {
+      .left, .right {
+        width: 50%;
+      }
+      svg {
+        margin-right: -100px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .march-beginning svg {
+    min-height: 700px;  
+    max-height: 900px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .march-beginning {
+    .container { display: block;
+      .left, .right {
+        width: 100%;
+        display: block;
+      }
+      .right {
+        text-align: center;
+        svg {
+          width: 100%;
+          max-width: 500px;
+          height: auto;
+          margin: 0 0 0 -15px;
+          padding: 35px 0 0;
+          min-height: none;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .march-beginning {
+    padding: 35px 0;
+  }
+}
+
+//  ===========================================
+//  History: March Ending
+//  ===========================================
+
+
+.march-ending {
+  padding: 150px 0 250px;
+  background: url(../img/marchers.jpg) center center no-repeat $black;
+  background-size: cover;
+  img {
+    width: 100%;
+  }
+  p {
+    margin-top: 1em;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .march-ending {
+    padding: 100px 0 150px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .march-ending {
+    padding: 50px 0 150px;
+  }
+}
+
+//  ===========================================
+//  A Call to Courage: Header
+//  ===========================================
+
+
+.a-call-to-courage {
+  background: url(../img/cloth.jpg) top left no-repeat $teal;
+  background-size: cover;
+  color: $charcoal;
+  position: relative;
+  transform: rotate(-2deg) skewX(-2deg);
+  -webkit-transform: rotate(-2deg) skewX(-2deg);
+  -ms-transform: rotate(-2deg) skewX(-2deg);
+  margin-top: -100px;
+  margin-bottom: -100px;
+  padding-bottom: 100px;
+  padding-top: 100px;
+  @media screen and (max-width: 768px) {
+    padding: 50px 0;
+  }
+  .container {
+    position: relative;
+    transform: rotate(2deg) skewX(2deg);
+    -webkit-transform: rotate(2deg) skewX(2deg);
+    -ms-transform: rotate(2deg) skewX(2deg);
+    .button {
+      width: 400px;
+      max-width: 36%;
+      position: absolute; right: 0;
+      bottom: -250px;
+      z-index: 99;
+      right: 35px;
+      @media screen and (max-width: 992px) {
+        max-width: 40%;
+        width: 280px;
+        bottom: -275px;
+      }
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
+    }
+  }
+  h1 {
+    font-size: 8rem;
+    margin-bottom: .3em;
+    @media screen and (max-width: 768px) {
+      font-size: 5rem;
+    }
+    @media screen and (max-width: 480px) {
+      line-height: .9;
+    }
+    span {
+      font-size: 2.5rem;
+      display: block;
+      line-height: 1.3;
+      @media screen and (max-width: 480px) {
+        margin-top: .6em;
+      }
+      em {
+        padding-right: 3px;
+      }
+    }
+  }
+  p {
+    max-width: 62%;
+    @media screen and (max-width: 992px) {
+      max-width: 100%;
+    }
+  }
+}
+
+//  ===========================================
+//  Schedule of Events
+//  ===========================================
+
+.schedule {
+  background: #FFFFFF;
+  color: $charcoal;
+  padding: 200px 0 100px;
+  @media screen and (max-width: 768px) {
+    padding: 175px 0 35px;
+  }
+  h4 {
+    color: $grey;
+    margin-bottom: 3em;
+    @media screen and (max-width: 768px) {
+      margin-bottom: 1em;
+    }
+  }
+  h3 {
+    margin-bottom: 0.4em;
+  }
+  p {
+    max-width: 800px;
+    strong {
+      display: block;
+      font-size: 1.6rem;
+    }
+    a {
+      border-color: $grey;
+
+  text-shadow: 0 1px 0 #fff, 1px 1px 0 #fff, -1px 1px #fff,
+				 	 0 2px 0 #fff, 2px 2px 0 #fff, -2px 2px #fff,
+				 	 0 3px 0 #fff, 3px 3px 0 #fff, -3px 3px #fff,
+				 	 0 4px 0 #fff, 0 4px 0 #fff, -4px 4px #fff,
+				 	 0 5px 0 #fff, 0 5px 0 #fff, -5px 5px #fff;
+      &:hover {
+        border-color: $teal;
+      }
+    }
+  }
+  ul {
+    list-style: none;
+    padding-left: 1em;
+    margin: 2em 0;
+      @media screen and (max-width: 480px) {
+        padding: 0;
+      }
+    li {
+      margin-bottom: 1em;
+      position: relative;
+      padding-left: 1em;
+      &:before {
+        content: ' ';
+        height: 8px;
+        width: 8px;
+        background: $teal;
+        position: absolute;
+        top: 12px;
+        left: 0px;
+      }
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+      span {
+        display: block;
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+//  ===========================================
+//  Footer
+//  ===========================================
+
+footer {
+  background: $white;
+  padding: 75px 0;
+  color: $charcoal;
+  .left {
+    width: 60%;
+    float: left;
+    margin-right: 9%;
+  }
+  .right {
+    float: right;
+    width: 30%;
+    ul {
+      color: #99a7aa;
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
+      li {
+        font-size: 1rem;
+      }
+    }
+  }
+  p {
+    font-size: 1rem;
+    color: #99a7aa;
+    a {
+      border-color: #99a7aa;
+      font-weight: $bold;
+	  text-shadow: 0 3px 0 $white, 3px 3px 0 $white, -3px 3px $white;
+      &:hover {
+        color: $teal;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  footer {
+    padding: 35px 0;
+    .left, .right {
+      width: 100%;
+      float: none;
+      margin: 0;
+    }
+    .right {
+      margin-top: 1em;
+    }
+  }
+}
+
+//  ===========================================
+//  Helper Classes
+//  ===========================================
+
+.centered {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.alignright {
+  text-align: right;
+}
+
+// Screenreaders only
+.sr-only {
+  position:absolute;
+  left:-10000px;
+  top:auto;
+  width:1px;
+  height:1px;
+  overflow:hidden;
+}
+
+
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}
+
+
+// =============================
+// Featherlight
+// =============================
+
+
+/**
+ * Featherlight – ultra slim jQuery lightbox
+ * Version 1.4.0 - http://noelboss.github.io/featherlight/
+ *
+ * Copyright 2016, Noël Raoul Bossart (http://www.noelboss.com)
+ * MIT Licensed.
+**/
+@media all {
+  .featherlight {
+    display: none;
+
+    /* dimensions: spanning the background from edge to edge */
+    position:fixed;
+    top: 0; right: 0; bottom: 0; left: 0;
+    z-index: 2147483647; /* z-index needs to be >= elements on the site. */
+
+    /* position: centering content */
+    text-align: center;
+
+    /* insures that the ::before pseudo element doesn't force wrap with fixed width content; */
+    white-space: nowrap;
+
+    /* styling */
+    cursor: pointer;
+    background: #333;
+    /* IE8 "hack" for nested featherlights */
+    background: rgba(0, 0, 0, 0);
+  }
+
+  /* support for nested featherlights. Does not work in IE8 (use JS to fix) */
+  .featherlight:last-of-type {
+    background: rgba(0, 0, 0, 0.8);
+  }
+
+  .featherlight:before {
+    /* position: trick to center content vertically */
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -0.25em;
+  }
+
+  .featherlight .featherlight-content {
+    /* make content container for positioned elements (close button) */
+    position: relative;
+
+    /* position: centering vertical and horizontal */
+    text-align: left;
+    vertical-align: middle;
+    display: inline-block;
+
+    /* dimensions: cut off images */
+    overflow: auto;
+    padding: 25px 25px 0;
+    border-bottom: 25px solid transparent;
+
+    /* dimensions: handling large content */
+    margin-left: 5%;
+    margin-right: 5%;
+    max-height: 95%;
+
+    /* styling */
+    background: #EEF4F4;
+    cursor: auto;
+
+    /* reset white-space wrapping */
+    white-space: normal;
+  }
+
+  /* contains the content */
+  .featherlight .featherlight-inner {
+    /* make sure its visible */
+    display: block;
+  }
+
+  .featherlight .featherlight-close-icon {
+    /* position: centering vertical and horizontal */
+    position: absolute;
+    z-index: 9999;
+    top: 0;
+    right: 0;
+
+    /* dimensions: 25px x 25px */
+    line-height: 25px;
+    width: 25px;
+
+    /* styling */
+    cursor: pointer;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background: #fff; /* Set the background in case it overlaps the content */
+    background: #EEF4F4;
+    color: #000;
+  }
+
+
+  .featherlight .featherlight-image {
+    /* styling */
+    width: 100%;
+  }
+
+
+  .featherlight-iframe .featherlight-content {
+    /* removed the border for image croping since iframe is edge to edge */
+    border-bottom: 0;
+    padding: 0;
+  }
+
+  .featherlight iframe {
+    /* styling */
+    border: none;
+  }
+}
+
+/* handling phones and small screens */
+@media only screen and (max-width: 1024px) {
+  .featherlight .featherlight-content {
+    /* dimensions: maximize lightbox with for small screens */
+    margin-left: 10px;
+    margin-right: 20px;
+    max-height: 98%;
+
+    padding: 10px 10px 0;
+    border-bottom: 10px solid transparent;
+  }
+}
